@@ -42,7 +42,7 @@
     UserInfo *userInfoD17 = [[UserInfo alloc] initWith:@"gD_Carl_A"];
     UserInfo *userInfoE18 = [[UserInfo alloc] initWith:@"dCarl_E"];
     UserInfo *userInfoF19 = [[UserInfo alloc] initWith:@"sCarl_F"];
-    UserInfo *userInfoG20 = [[UserInfo alloc] initWith:@"G_Carl_A"];
+    UserInfo *userInfoG20 = [[UserInfo alloc] initWith:@"_G_Carl_A"];
     dataArray = [NSMutableArray arrayWithObjects:userInfoA, userInfoB, userInfoC, userInfoD, userInfoE, userInfoF, userInfoG, userInfoA1, userInfoB2, userInfoC3, userInfoD4, userInfoG6, userInfoA7, userInfoB8, userInfoC9, userInfoD0, userInfoE11, userInfoF12, userInfoG13, userInfoA14, userInfoB15, userInfoC16, userInfoD17, userInfoE18, userInfoF19, userInfoG20, nil];
     
     [self doGroupWithArray];
@@ -128,7 +128,7 @@
     }
     //add special word to group
     if (specialArray.count>0) {
-        //[_titleArray addObject:@"#"];
+        [_titleArray addObject:@"#"];
         [_groupDictionary setObject:specialArray forKey:@"#"];
     }
    // [specialArray release];
