@@ -17,14 +17,33 @@
 
 - (void)viewDidLoad
 {
-    UserInfo *userInfoA = [[UserInfo alloc] initWith:@"Carl_A"];
+    UserInfo *userInfoA = [[UserInfo alloc] initWith:@"aCarl_A"];
     UserInfo *userInfoB = [[UserInfo alloc] initWith:@"B_Carl_B"];
     UserInfo *userInfoC = [[UserInfo alloc] initWith:@"C_Carl_A"];
     UserInfo *userInfoD = [[UserInfo alloc] initWith:@"D_Carl_A"];
-    UserInfo *userInfoE = [[UserInfo alloc] initWith:@"Carl_E"];
-    UserInfo *userInfoF = [[UserInfo alloc] initWith:@"Carl_F"];
+    UserInfo *userInfoE = [[UserInfo alloc] initWith:@"dCarl_E"];
+    UserInfo *userInfoF = [[UserInfo alloc] initWith:@"fCarl_F"];
     UserInfo *userInfoG = [[UserInfo alloc] initWith:@"G_Carl_A"];
-    dataArray = [NSMutableArray arrayWithObjects:userInfoA, userInfoB, userInfoC, userInfoD, userInfoE, userInfoF, userInfoG, nil];
+    UserInfo *userInfoA1 = [[UserInfo alloc] initWith:@"vCarl_A"];
+    UserInfo *userInfoB2 = [[UserInfo alloc] initWith:@"zB_Carl_B"];
+    UserInfo *userInfoC3 = [[UserInfo alloc] initWith:@"zC_Carl_A"];
+    UserInfo *userInfoD4 = [[UserInfo alloc] initWith:@"iD_Carl_A"];
+    UserInfo *userInfoG6 = [[UserInfo alloc] initWith:@"iG_Carl_A"];
+    UserInfo *userInfoA7 = [[UserInfo alloc] initWith:@"oCarl_A"];
+    UserInfo *userInfoB8 = [[UserInfo alloc] initWith:@"pB_Carl_B"];
+    UserInfo *userInfoC9 = [[UserInfo alloc] initWith:@"lC_Carl_A"];
+    UserInfo *userInfoD0 = [[UserInfo alloc] initWith:@"kD_Carl_A"];
+    UserInfo *userInfoE11 = [[UserInfo alloc] initWith:@"kCarl_E"];
+    UserInfo *userInfoF12 = [[UserInfo alloc] initWith:@"eCarl_F"];
+    UserInfo *userInfoG13 = [[UserInfo alloc] initWith:@"rG_Carl_A"];
+    UserInfo *userInfoA14 = [[UserInfo alloc] initWith:@"wCarl_A"];
+    UserInfo *userInfoB15 = [[UserInfo alloc] initWith:@"qB_Carl_B"];
+    UserInfo *userInfoC16 = [[UserInfo alloc] initWith:@"tC_Carl_A"];
+    UserInfo *userInfoD17 = [[UserInfo alloc] initWith:@"gD_Carl_A"];
+    UserInfo *userInfoE18 = [[UserInfo alloc] initWith:@"dCarl_E"];
+    UserInfo *userInfoF19 = [[UserInfo alloc] initWith:@"sCarl_F"];
+    UserInfo *userInfoG20 = [[UserInfo alloc] initWith:@"G_Carl_A"];
+    dataArray = [NSMutableArray arrayWithObjects:userInfoA, userInfoB, userInfoC, userInfoD, userInfoE, userInfoF, userInfoG, userInfoA1, userInfoB2, userInfoC3, userInfoD4, userInfoG6, userInfoA7, userInfoB8, userInfoC9, userInfoD0, userInfoE11, userInfoF12, userInfoG13, userInfoA14, userInfoB15, userInfoC16, userInfoD17, userInfoE18, userInfoF19, userInfoG20, nil];
     
     [self doGroupWithArray];
 }
@@ -57,6 +76,11 @@
     NSLog(@"%@",@(indexPath.row));
     cell.textLabel.text = ((UserInfo*)items[indexPath.row]).nickname;
     return cell;
+}
+
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
+{
+    return  _titleArray;
 }
 
 // group with array(*a-z#)
